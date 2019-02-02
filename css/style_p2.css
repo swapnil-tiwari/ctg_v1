@@ -1,0 +1,120 @@
+.img_bg
+{
+    height: 60%;
+    width: 100%;
+    overflow-y: hidden;
+}
+.overlay_content h4
+{
+    font-size: 15px;
+    color: white;
+	font-weight: bold;
+}
+.logo-container
+{
+    background: white;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-top: -60px;
+    position: relative;
+    text-align: center;
+    border-radius: 85px;
+    border-style: double;
+}
+.logo-container img
+{
+    margin-top: 17px;
+    width:100px;
+}
+.contain-form
+{
+    width:65%;
+    margin:auto;
+    margin-bottom:50px;
+    margin-top:10px;
+}
+.form-field label.form-field-label {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    text-align: left;
+}
+.form-field label {
+    padding: 3px 6px 0 0;
+    margin: 0 0 3px 0;
+    vertical-align: top;
+    font-size: 13px;
+}
+.alert {
+    color: red;
+    font-style: italic;
+    padding: 0px !important;
+}
+.left
+{
+    border-right:1px solid #8e8787;
+}
+textarea:hover {
+    border: 1px solid #555;
+}
+textarea
+{
+    resize: none;
+    width: 95%;
+    height: 80px;
+    border: 1px solid #d0d0d0;
+    background-color: #fff;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    transition: all 0.5s;
+    border-radius: 5px;
+    border: 1px solid #a4a5ae;
+    padding: 5px;
+}
+.btn1
+{
+    width: 150px;
+    height: 50px;
+    display: block !important;
+    margin:auto;
+    border-radius: 25px !important;
+    background: transparent !important;
+    color: black !important;
+    transition: all 200ms;
+    font-size: 15px !important;
+    font-weight: bold !important;
+}
+.btn1:hover
+{
+    background: #25283B !important;
+    color: white !important;
+}
+.contain-form input[type=text]
+{
+    transition: all 0.5s;
+    border-radius: 5px;
+    border: 1px solid #a4a5ae;
+    padding: 5px;
+
+}
+@media screen and (max-width: 500px) {
+    .img_bg img
+    {
+        height: 100%;
+    }
+    .left{
+        border:none;
+    }
+    input[type=text]
+    {
+        width:100%;
+    }
+    textarea
+    {
+        width:100%;
+    }
+  }
