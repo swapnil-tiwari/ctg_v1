@@ -101,22 +101,22 @@
                     <img src="./images/logo.png">
                 </div>
                 <div class="contain-form">
-                    <form class="form-warp">
+                    <form class="form-warp" id="myform" method="POST" action="https://ctgapi.herokuapp.com/getintouch/"> 
                         <div class="form-main row">
                             <div class="col-sm-6 left">
                                 <div class="subleft row">
                                     <div class="col-sm-6 subleft_left">
                                             <br><label class="form-field-label" for="first-name">First Name: <em class="alert">*</em></label>
-                                            <input type="text" id="fname" name="fname">
+                                            <input type="text" id="fname" name="first_name">
                                             <br><br><label class="form-field-label" for="company-name">Company Name:</label>
-                                            <input type="text" id="cname" name="cname">
+                                            <input type="text" id="cname" name="company">
                                             <br><br><label class="form-field-label" for="email">Email: <em class="alert">*</em></label>
-                                            <br><input type="text" id="cname" name="cname">
+                                            <br><input type="text" id="cname" name="email">
                                         
                                     </div>
                                     <div class="col-sm-6 subleft_right">
                                             <br><label class="form-field-label" for="last-name">Last Name: <em class="alert">*</em></label>
-                                            <br><input type="text" id="lname" name="lname">
+                                            <br><input type="text" id="lname" name="last_name">
                                             <br><br><label class="form-field-label" for="phone">Contact Number: <em class="alert">*</em></label>
                                             <br><input type="text" id="lname" name="phone">
                                             <br><br><label class="form-field-label" for="website">Website URL (if any):</label>
@@ -129,15 +129,15 @@
                             <div class="col-sm-6 right">
                                     <br><label class="form-field-label" for="comments">Comments:</label>
                                     <br><textarea name="comments" id="comments" rows="6" cols="50"></textarea>
-                                    <br><form method="post">
+                                    <!-- <br><form method="post">
                                             <script src='https://www.google.com/recaptcha/api.js'></script>
                                             <div class="g-recaptcha" data-sitekey="6LdHBocUAAAAABX1sGziwejTahMKgHRAnnfneHtO"></div>
                                           </form>
-                                          
+                                           -->
 
                             </div>
                         </div>
-                       <br><br> <button type="button" class="btn btn-primary btn1">Get In Touch</button>
+                       <br><br> <button type="submit" class="btn btn-primary btn1">Get In Touch</button>
                     </form>
                     
                     
@@ -176,3 +176,16 @@
             
 
 </body>
+<!-- <script>
+     async function submitdata()
+    {
+        var myForm = document.getElementById('myform');
+        formData = new FormData(myForm);
+        console.log(formData);
+        res=await fetch ("https://ctgapi.herokuapp.com/getintouch/",{ mode:'cors', method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+             },body:formData});
+        console.log(formData);
+    }
+</script> -->
