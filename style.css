@@ -286,11 +286,24 @@ hr
 	padding-left: 30px;
     padding-right: 30px;
 }
+.img_bg
+{
+	display: none;
+}
 @media screen and (max-width: 486px){
 
 	.mob-hide{
 
 		display: none;
+	}
+	.video_bg
+	{
+		display: none;
+	}
+	.img_bg
+	{
+		display: block;
+		height: 100%;
 	}
 	.view{
 		display: block;
