@@ -395,6 +395,9 @@ hr
 
 		display: none;
 	}
+	.content_overlay{
+		background:rgba(40,23,56,0.6);
+	}
 	.video_bg
 	{
 		display: none;
