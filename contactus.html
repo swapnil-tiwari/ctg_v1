@@ -101,7 +101,7 @@
                     <img src="./images/logo.png">
                 </div>
                 <div class="contain-form" id="form_web">
-                    <form class="form-warp" id="myform" method="POST" action="https://ctgapi.herokuapp.com/getintouch/"> 
+                    <form class="form-warp" id="myform" method="POST" action=""> 
                         <div class="form-main row">
                             <div class="col-sm-6 left">
                                 <div class="subleft row">
@@ -111,23 +111,23 @@
                                             <br><br><label class="form-field-label" for="company-name">Company Name:</label>
                                             <input type="text" id="cname" name="company" tabindex="3">
                                             <br><br><label class="form-field-label" for="email">Email: <em class="alert">*</em></label>
-                                            <br><input type="text" id="cname" name="email" tabindex="5">
+                                            <br><input type="text" id="email" name="email" tabindex="5">
                                         
                                     </div>
                                     <div class="col-sm-6 subleft_right">
                                             <br><label class="form-field-label" for="last-name">Last Name: <em class="alert">*</em></label>
                                             <br><input type="text" id="lname" name="last_name" tabindex="2">
                                             <br><br><label class="form-field-label" for="phone">Contact Number: <em class="alert">*</em></label>
-                                            <br><input type="text" id="lname" name="phone" tabindex="4">
+                                            <br><input type="text" id="cno" name="phone" tabindex="4">
                                             <br><br><label class="form-field-label" for="website">Website URL (if any):</label>
-                                            <br><input type="text" id="lname" name="website" tabindex="6"><br>
+                                            <br><input type="text" id="web" name="website" tabindex="6"><br>
 
 
                                     </div>      
                                 </div>
                             </div>
                             <div class="col-sm-6 right">
-                                    <br><label class="form-field-label" for="comments">Comments:</label>
+                                    <br><label class="form-field-label" for="comments" id=" ">Comments:</label>
                                     <br><textarea name="comments" id="comments" rows="6" cols="50" tabindex="7"></textarea>
                                     <!-- <br><form method="post">
                                             <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -137,41 +137,41 @@
 
                             </div>
                         </div>
-                       <br><br> <button type="submit" class="btn btn-primary btn1" tabindex="8">Get In Touch</button>
+                       <br><br> <button type="button" onclick='submitdata()' class="btn btn-primary btn1" tabindex="8" id="sub1">Get In Touch</button>
                     </form>
                     
                     
                 </div>
                 <div class="contain-form" id="form_mob" style="display:none;">
-                    <form class="form-warp" id="myform" method="POST" action="https://ctgapi.herokuapp.com/getintouch/"> 
+                    <form class="form-warp" id="myform" method="POST" action=""> 
                         <div class="form-main row">
                             <div class="col-sm-6 left">
                                 <div class="subleft row">
                                     <div class="col-sm-6 subleft_left">
                                             <br><label class="form-field-label" for="first-name">First Name: <em class="alert">*</em></label>
-                                            <input type="text" id="fname" name="first_name">
+                                            <input type="text" id="fname1" name="first_name">
                                             <br><br><label class="form-field-label" for="last-name">Last Name: <em class="alert">*</em></label>
-                                            <br><input type="text" id="lname" name="last_name">
+                                            <br><input type="text" id="lname1" name="last_name">
                                             
                                             <br><br><label class="form-field-label" for="email">Email: <em class="alert">*</em></label>
-                                            <br><input type="text" id="cname" name="email">
+                                            <br><input type="text" id="email1" name="email">
                                         
                                     </div>
                                     <div class="col-sm-6 subleft_right">
                                             <br><label class="form-field-label" for="company-name">Company Name:</label>
-                                           <input type="text" id="cname" name="company">
+                                           <input type="text" id="cname1" name="company">
                                             <br><br><label class="form-field-label" for="phone">Contact Number: <em class="alert">*</em></label>
-                                            <br><input type="text" id="lname" name="phone">
+                                            <br><input type="text" id="cno1" name="phone">
                                             <br><br><label class="form-field-label" for="website">Website URL (if any):</label>
-                                            <br><input type="text" id="lname" name="website"><br>
+                                            <br><input type="text" id="web1" name="website"><br>
 
 
                                     </div>      
                                 </div>
                             </div>
                             <div class="col-sm-6 right">
-                                    <br><label class="form-field-label" for="comments">Comments:</label>
-                                    <br><textarea name="comments" id="comments" rows="6" cols="50" tabindex="7"></textarea>
+                                    <br><label class="form-field-label" for="comments" id="">Comments:</label>
+                                    <br><textarea name="comments" id="comments1" rows="6" cols="50" tabindex="7"></textarea>
                                     <!-- <br><form method="post">
                                             <script src='https://www.google.com/recaptcha/api.js'></script>
                                             <div class="g-recaptcha" data-sitekey="6LdHBocUAAAAABX1sGziwejTahMKgHRAnnfneHtO"></div>
@@ -180,7 +180,7 @@
 
                             </div>
                         </div>
-                       <br><br> <button type="submit" class="btn btn-primary btn1" tabindex="8">Get In Touch</button>
+                       <br><br> <button type="button" onclick="submitdata_mob();" class="btn btn-primary btn1" tabindex="8" id="sub2">Get In Touch</button>
                     </form>
                     
                     
@@ -283,16 +283,88 @@
             
 
 </body>
-<!-- <script>
+<script>
      async function submitdata()
     {
-        var myForm = document.getElementById('myform');
-        formData = new FormData(myForm);
-        console.log(formData);
-        res=await fetch ("https://ctgapi.herokuapp.com/getintouch/",{ mode:'cors', method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-             },body:formData});
-        console.log(formData);
+        customer={
+        fname:fname.value,
+        lname:lname.value,
+        email:email.value,
+        org:cname.value,
+        cno:cno.value,
+        website:web.value,
+        comments:comments.value
+    };
+    try {
+
+        sub1.innerHTML=`<span id='loader'><img src='./images/load.svg' style="width: 35px"></span>`;
+
+        res=await fetch("https://ctgv1.herokuapp.com/submit",
+                {
+                    method:'POST',
+                     headers: {
+                         'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                },body:JSON.stringify(customer)});
+        res= await res.json();
+        console.log(res);
+        sub1.innerHTML='Get In Touch';
+        if(res.status=="200")
+        {
+            alert('You details has been submitted, our executive will contact you as soon as possible');
+            
+        }
+        else{
+            alert('Some internal error');
+        }
+     
+
     }
-</script> -->
+        
+        catch (e)
+        {
+            console.log(e);
+        }
+       
+    }
+    async function submitdata_mob()
+    {
+        customer={
+        fname:fname1.value,
+        lname:lname1.value,
+        email:email1.value,
+        org:cname1.value,
+        cno:cno1.value,
+        website:web1.value,
+        comments:comments1.value
+    };
+    try {
+        sub2.innerHTML=`<span id='loader'><img src='./images/load.svg' style="width: 35px"></span>`;
+        res=await fetch("https://ctgv1.herokuapp.com/submit",
+                {
+                    method:'POST',
+                     headers: {
+                         'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                },body:JSON.stringify(customer)});
+        res= await res.json();
+        console.log(res);
+        sub2.innerHTML='Get In Touch';
+        if(res.status=="200")
+        {
+            alert('You details has been submitted, our executive will contact you as soon as possible');
+        }
+        else{
+            alert('Some internal error');
+        }
+     
+
+    }
+        
+        catch (e)
+        {
+            console.log(e);
+        }
+       
+    }
+</script> 

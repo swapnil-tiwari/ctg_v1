@@ -88,11 +88,11 @@ textarea
     font-size: 15px !important;
     font-weight: bold !important;
 }
-.btn1:hover
+/* .btn1:hover
 {
     background: #25283B !important;
     color: white !important;
-}
+} */
 .contain-form input[type=text]
 {
     transition: all 0.5s;
