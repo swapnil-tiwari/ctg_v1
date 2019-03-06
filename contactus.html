@@ -107,18 +107,18 @@
                                 <div class="subleft row">
                                     <div class="col-sm-6 subleft_left">
                                             <br><label class="form-field-label" for="first-name">First Name: <em class="alert">*</em></label>
-                                            <input type="text" id="fname" name="first_name" tabindex="1">
+                                            <input type="text" id="fname" name="first_name" tabindex="1" required>
                                             <br><br><label class="form-field-label" for="company-name">Company Name:</label>
                                             <input type="text" id="cname" name="company" tabindex="3">
                                             <br><br><label class="form-field-label" for="email">Email: <em class="alert">*</em></label>
-                                            <br><input type="text" id="email" name="email" tabindex="5">
+                                            <br><input type="text" id="email" name="email" tabindex="5" required>
                                         
                                     </div>
                                     <div class="col-sm-6 subleft_right">
                                             <br><label class="form-field-label" for="last-name">Last Name: <em class="alert">*</em></label>
-                                            <br><input type="text" id="lname" name="last_name" tabindex="2">
+                                            <br><input type="text" id="lname" name="last_name" tabindex="2" required>
                                             <br><br><label class="form-field-label" for="phone">Contact Number: <em class="alert">*</em></label>
-                                            <br><input type="text" id="cno" name="phone" tabindex="4">
+                                            <br><input type="text" id="cno" name="phone" tabindex="4" required pattern="\d{10}">
                                             <br><br><label class="form-field-label" for="website">Website URL (if any):</label>
                                             <br><input type="text" id="web" name="website" tabindex="6"><br>
 
@@ -137,7 +137,7 @@
 
                             </div>
                         </div>
-                       <br><br> <button type="button" onclick='submitdata()' class="btn btn-primary btn1" tabindex="8" id="sub1">Get In Touch</button>
+                       <br><br> <button type="button" onclick="submitdata();" class="btn btn-primary btn1" tabindex="8" id="sub1" onkeypress="event.key=='Enter'&& submitdata();">Get In Touch</button>
                     </form>
                     
                     
@@ -180,7 +180,7 @@
 
                             </div>
                         </div>
-                       <br><br> <button type="button" onclick="submitdata_mob();" class="btn btn-primary btn1" tabindex="8" id="sub2">Get In Touch</button>
+                       <br><br> <button type="button" onclick="submitdata_mob();" class="btn btn-primary btn1" tabindex="8" id="sub2" onkeypress="event.key=='Enter'&& submitdata_mob();">Get In Touch</button>
                     </form>
                     
                     
@@ -263,7 +263,7 @@
 				
 	              <h4 class="text-color" style="text-align: center;letter-spacing: 2px;">SOCIAL LINKS</h4>
 	              <hr style="background-color: grey;margin-top: 0px;" class="width-50">
-	              <a href="https://business.facebook.com/Connect-To-Grow-474418903021671/?business_id=286040325509745" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook-square fa-3x fa-color"></i>&nbsp;</a>
+	              <a href="https://business.facebook.com/Connect-To-Grow-474418903021671/?business_id=286040325509745" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook-square fa-3x fa-color" ></i>&nbsp;</a>
 	              <a href="https://www.instagram.com/connectogrow/" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram fa-3x i-color"></i>&nbsp;</a>
 	              <a href="https://twitter.com/TeamCodeNova/" rel="noopener noreferrer" target="_blank"><i class="fab fa-twitter-square fa-3x twi-color"></i></a>
             	
