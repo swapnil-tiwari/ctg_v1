@@ -7,7 +7,7 @@
 	<link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, minimum-scale=1">
 
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -266,12 +266,19 @@
 			<button class="btn btn-trans btn-size">Download Brochure</button>
 		</div>
 		-->
+		<div class="pickup-line">
+			<p class="para_about pickup-para">Connect to Grow is a one stop platform for all your needs. It helps you find the best solution to every services and professionals who require precise results and  hassle - free processing.</p> 
+		</div>
+
+		<section class="scrolldown">
+			<a href="#allservices" id="scroll"><span></span></a>
+		</section>
 
 	</div>
 
 	</div>
-
-	<!-- Content who we are-->
+	
+	<!-- Content who we are
 
 		<div class="about">
 			
@@ -290,7 +297,7 @@ Connect to Grow helps you find the best solution to every services and professio
 
 
 
-	<!-- End of who we are-->
+	 End of who we are -->
 
 	<!-- For Mobile-->
 	<div class="services view">
@@ -791,11 +798,11 @@ Connect to Grow helps you find the best solution to every services and professio
 						
 						<ul class="menu-ul">
 
-							<li class="list-item">
+							<!--<li class="list-item">
 								<i class="fa fa-angle-right ficon"></i><a href="#">ABOUT US</a>
-							</li>
+							</li>-->
 							<li class="list-item">
-								<i class="fa fa-angle-right ficon"></i><a href="#">PORTFOLIO</a>
+								<i class="fa fa-angle-right ficon"></i><a href="https://swapnil-tiwari.github.io/ctg-portfolio/">PORTFOLIO</a>
 							</li>
 							<li class="list-item">
 								<i class="fa fa-angle-right ficon"></i><a href="#">PRIVACY POLICY</a>
@@ -804,7 +811,7 @@ Connect to Grow helps you find the best solution to every services and professio
 								<i class="fa fa-angle-right ficon"></i><a href="#">TERMS OF USE</a>
 							</li>
 							<li class="list-item">
-								<i class="fa fa-angle-right ficon"></i><a href="#">BLOG</a>
+								<i class="fa fa-angle-right ficon"></i><a href="https://connectogrow.blogspot.com/">BLOG</a>
 							</li>
 							
 						</ul>
@@ -821,7 +828,7 @@ Connect to Grow helps you find the best solution to every services and professio
 						<ul class="menu-ul">
 
 							<li class="list-item">
-								<i class="fa fa-angle-right ficon"></i><a href="#">CONTACT US</a>
+								<i class="fa fa-angle-right ficon"></i><a href="./contactus.html">CONTACT US</a>
 							</li>
 							
 						</ul>
@@ -846,7 +853,7 @@ Connect to Grow helps you find the best solution to every services and professio
 	</div>
 	<!-- end of footer -->
       <div class="copyright">
-        <div style="padding: 50px 50px">
+        <div style="padding: 30px 50px">
            <font color="#fff">© Copyright <strong class="text-color">CodeNova</strong></font><br>
            <font color="#fff">All Rights Reserved</font>
         </div>
@@ -859,7 +866,7 @@ Connect to Grow helps you find the best solution to every services and professio
 <script>
         $(document).ready(function(){
           // Add smooth scrolling to all links
-          $("#liserv").on('click', function(event) {
+          $("#liserv, #scroll").on('click', function(event) {
             console.log("hello")
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== "") {
