@@ -498,4 +498,11 @@ section {
 	.footer{
 		margin-top: 0;
 	}
+	.pickup-line{
+		padding: 0;
+	}
+	.para_about{
+		padding: 0;
+		font-size: 12px;
+	}
 }
