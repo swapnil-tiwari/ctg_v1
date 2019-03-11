@@ -203,7 +203,7 @@ hr
 }
 .view{
 
-	display: none;
+	display: none !important;
 }
 .pickup-line{
 	padding: 30px 50px;
@@ -473,11 +473,14 @@ section {
 
 	margin-top: 25%;
 }
+.mob-hide{
+	display: block !important;
+}
 @media screen and (max-width: 760px){
 
 	.mob-hide{
 
-		display: none;
+		display: none !important;
 	}
 	.video_bg
 	{
@@ -489,7 +492,7 @@ section {
 		height: 100%;
 	}
 	.view{
-		display: block;
+		display: block !important;
 	}
 	.ctg-logo{
 		width: 10vw;
