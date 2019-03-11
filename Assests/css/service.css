@@ -99,10 +99,10 @@
 
 		letter-spacing: 5px;
 	    font-weight: bold;
-	    
+	    font-size: 6vh !important;
 	    position: absolute;
 	    padding: 50px 50px 0 30px;
-	    margin-top: 14vh;
+	    margin-top: 17vh;
 	    margin-left: 0px;
 	    font-family: sans-serif;
 	}
