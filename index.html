@@ -1,249 +1,279 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 	<title>CTG</title>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, minimum-scale=1">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, minimum-scale=1">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+		integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script  src="js/scroll.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
- <style>
-/* The actual timeline (the vertical ruler) */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 20px auto;
-}
+	<script src="js/scroll.js"></script>
 
-/* The actual timeline (the vertical ruler) */
-.timeline::after{
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: #335c81;
-  top: 0;
-  bottom: -15%;
-  left: 50%;
-  margin-left: -3px;
-}
+	<style>
+		/* The actual timeline (the vertical ruler) */
+		.timeline {
+			position: relative;
+			max-width: 1200px;
+			margin: 20px auto;
+		}
 
-.sub-body::after{
+		/* The actual timeline (the vertical ruler) */
+		.timeline::after {
+			content: '';
+			position: absolute;
+			width: 6px;
+			background-color: #335c81;
+			top: 0;
+			bottom: -15%;
+			left: 50%;
+			margin-left: -3px;
+		}
 
-  content: '';
-  position: absolute;
-  width: 3px;
-  background-color: #335c81;
-  top: 0;
-  bottom: 0;
-  left: 2%;
-  margin-left: -3px;
+		.sub-body::after {
 
-}
-/* Container around content */
-.container1{
-  padding: 0px 8px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-}
-.container2{
+			content: '';
+			position: absolute;
+			width: 3px;
+			background-color: #335c81;
+			top: 0;
+			bottom: 0;
+			left: 2%;
+			margin-left: -3px;
 
-  padding: 0px 8px;
-  position: relative;
-  background-color: inherit;
-}
+		}
 
-/* The circles on the timeline */
-.container1::after{
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -13px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-}
+		/* Container around content */
+		.container1 {
+			padding: 0px 8px;
+			position: relative;
+			background-color: inherit;
+			width: 50%;
+		}
 
-.container2::after {
-	content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  right: -13px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: -3px;
-  border-radius: 50%;
-  z-index: 1;
-}
+		.container2 {
 
-/* Place the container to the left */
-.left {
-  left: 0;
-}
+			padding: 0px 8px;
+			position: relative;
+			background-color: inherit;
+		}
 
-/* Place the container to the right */
-.right {
-  left: 50%;
-}
+		/* The circles on the timeline */
+		.container1::after {
+			content: '';
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			right: -13px;
+			background-color: white;
+			border: 4px solid #FF9F55;
+			top: 15px;
+			border-radius: 50%;
+			z-index: 1;
+		}
 
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 28px;
-  border: medium solid white;
-  border-width: 15px 0 15px 15px;
-  border-color: transparent transparent transparent black;
-}
+		.container2::after {
+			content: '';
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			right: -13px;
+			background-color: white;
+			border: 4px solid #FF9F55;
+			top: -3px;
+			border-radius: 50%;
+			z-index: 1;
+		}
 
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 28px;
-  border: medium solid white;
-  border-width: 15px 15px 15px 0;
-  border-color: transparent black transparent transparent;
-}
+		/* Place the container to the left */
+		.left {
+			left: 0;
+		}
 
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -13px;
-}
-.right1::after{
+		/* Place the container to the right */
+		.right {
+			left: 50%;
+		}
 
-	left: -10px;
-}
+		/* Add arrows to the left container (pointing right) */
+		.left::before {
+			content: " ";
+			height: 0;
+			position: absolute;
+			top: 22px;
+			width: 0;
+			z-index: 1;
+			right: 28px;
+			border: medium solid white;
+			border-width: 15px 0 15px 15px;
+			border-color: transparent transparent transparent black;
+		}
 
-/* The actual content */
-.content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-}
+		/* Add arrows to the right container (pointing left) */
+		.right::before {
+			content: " ";
+			height: 0;
+			position: absolute;
+			top: 22px;
+			width: 0;
+			z-index: 1;
+			left: 28px;
+			border: medium solid white;
+			border-width: 15px 15px 15px 0;
+			border-color: transparent black transparent transparent;
+		}
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-  .timeline::after {
-  left: 31px;
-  }
-  
-  /* Full-width containers */
-  .container1, .container2 {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 25px;
-  }
-  
-  /* Make sure that all arrows are pointing leftwards */
-  .container1::before, .container2::before {
-  left: 60px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-  }
+		/* Fix the circle for containers on the right side */
+		.right::after {
+			left: -13px;
+		}
 
-  /* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-  left: 15px;
-  }
-  
-  /* Make all right containers behave like the left ones */
-  .right {
-  left: 0%;
-  }
-  .right1::after{
-  	left: -13px;
-  }
-}
-</style>
+		.right1::after {
+
+			left: -10px;
+		}
+
+		/* The actual content */
+		.content {
+			padding: 20px 30px;
+			background-color: white;
+			position: relative;
+			border-radius: 6px;
+		}
+
+		/* Media queries - Responsive timeline on screens less than 600px wide */
+		@media screen and (max-width: 600px) {
+
+			/* Place the timelime to the left */
+			.timeline::after {
+				left: 31px;
+			}
+
+			/* Full-width containers */
+			.container1,
+			.container2 {
+				width: 100%;
+				padding-left: 15px;
+				padding-right: 25px;
+			}
+
+			/* Make sure that all arrows are pointing leftwards */
+			.container1::before,
+			.container2::before {
+				left: 60px;
+				border: medium solid white;
+				border-width: 10px 10px 10px 0;
+				border-color: transparent white transparent transparent;
+			}
+
+			/* Make sure all circles are at the same spot */
+			.left::after,
+			.right::after {
+				left: 15px;
+			}
+
+			/* Make all right containers behave like the left ones */
+			.right {
+				left: 0%;
+			}
+
+			.right1::after {
+				left: -13px;
+			}
+		}
+
+		.mobile-section .col-sm-4 {
+			margin-right: -15px;
+			margin-left: -15px;
+			margin-bottom: 15px;
+
+		}
+		.container1{
+			visibility: hidden;
+		}
+		.animated
+		{
+			visibility: visible !important;
+		}
+	</style>
 
 </head>
+
 <body>
 	<div class="main-cont">
 		<div class="img_bg">
-					<img src="./images/bg1.jpg" style="width:100%; height: 100%;object-fit: cover;">
-	</div>
-	<div class="video_bg">
-		<video src="bg.mp4" autoplay="" muted="" loop="true">
-			
-		</video>
-	</div>
+			<img src="./images/bg1.jpg" style="width:100%; height: 100%;object-fit: cover;">
+		</div>
+		<div class="video_bg">
+			<video src="bg.mp4" autoplay="" muted="" loop="true">
 
-	<div class="content_overlay">
-		<nav class="navbar navbar-inverse">
-			  <div class="container-fluid">
-			    <div class="navbar-header">
-			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span> 
-			      </button>
-			      <a class="navbar-brand" href="#"><img src="./images/logo1.png" style="width:100px;margin-top:-25px; margin-left: -25px;"></a>
-			    </div>
-			    <div class="collapse navbar-collapse" id="myNavbar">
-			    
-			    <ul class="nav navbar-nav">
-			        <li class="active_custom">
-			        	<a href="./index.html">
-			        		<i class="fas fa-home"></i> Home
-			        	</a>
-			        </li>
-			        <li class="view">
-			        	<a href="#allservices" id="liserv">
-			        		<i class="fas fa-briefcase"></i> Services
-			        	</a>
-					</li>
-					<li class="mob-hide">
-			        	<a href="#allservice" id="liserv">
-			        		<i class="fas fa-briefcase"></i> Services
-			        	</a>
-					</li>
+			</video>
+		</div>
+
+		<div class="content_overlay">
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"><img src="./images/logo1.png"
+								style="width:100px;margin-top:-25px; margin-left: -25px;"></a>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+
+						<ul class="nav navbar-nav">
+							<li class="active_custom">
+								<a href="./index.html">
+									<i class="fas fa-home"></i> Home
+								</a>
+							</li>
+							<li class="view">
+								<a href="#allservices" id="liserv">
+									<i class="fas fa-briefcase"></i> Services
+								</a>
+							</li>
+							<li class="mob-hide">
+								<a href="#allservice" id="liserv">
+									<i class="fas fa-briefcase"></i> Services
+								</a>
+							</li>
 							<li>
 								<a href="https://swapnil-tiwari.github.io/ctg-portfolio/">
-										<i class="fas fa-portrait"></i> Portfolio
+									<i class="fas fa-portrait"></i> Portfolio
 								</a>
-						</li>
-			        <li>
-			        	<a href="./contactus.html">
-				        	<i class="far fa-envelope-open"></i> Contact Us
-				        </a>
-				    </li> 
-			        <li>
-			        	<a href="https://connectogrow.blogspot.com/">
-			        		<i class="fas fa-pen-nib"></i> Blog
-			        	</a>
-			        </li> 
-			    </ul>
-			     <!-- <ul class="nav navbar-nav navbar-right">
+							</li>
+							<li>
+								<a href="./contactus.html">
+									<i class="far fa-envelope-open"></i> Contact Us
+								</a>
+							</li>
+							<li>
+								<a href="https://connectogrow.blogspot.com/">
+									<i class="fas fa-pen-nib"></i> Blog
+								</a>
+							</li>
+						</ul>
+						<!-- <ul class="nav navbar-nav navbar-right">
 			        <li>
 			        	
 			        	<input type="text" name="" class="txt-search" placeholder="Search">
@@ -254,38 +284,40 @@
 			        
 			      </ul>
 			  -->
-			    </div>
-			  </div>
-		</nav>
+					</div>
+				</div>
+			</nav>
 
 
-		<div class="overlay_content">
-			<h1>Connect To Grow</h1>
-			<hr>
-			<h3>We Connect You Grow</h3>
-			<hr>
-		</div>
+			<div class="overlay_content">
+				<h1>Connect To Grow</h1>
+				<hr>
+				<h3>We Connect You Grow</h3>
+				<hr>
+			</div>
 
-		<!--<div class="button-class">
+			<!--<div class="button-class">
 			<button class="btn btn-white btn-size">Explore</button>
 			<button class="btn btn-trans btn-size">Download Brochure</button>
 		</div>
 		-->
-		<div class="pickup-line">
-			<p class="para_about pickup-para">Connect to Grow is a one stop platform for all your needs. It helps you find the best solution to every services and professionals who require precise results and  hassle - free processing.</p> 
+			<div class="pickup-line">
+				<p class="para_about pickup-para">Connect to Grow is a one stop platform for all your needs. It helps
+					you find the best solution to every services and professionals who require precise results and
+					hassle - free processing.</p>
+			</div>
+
+			<section class="scrolldown view">
+				<a href="#allservices" id="scroll"><span></span></a>
+			</section>
+			<section class="scrolldown mob-hide">
+				<a href="#allservice" id="scroll"><span></span></a>
+			</section>
+
 		</div>
 
-		<section class="scrolldown view">
-			<a href="#allservices" id="scroll"><span></span></a>
-		</section>
-		<section class="scrolldown mob-hide">
-			<a href="#allservice" id="scroll"><span></span></a>
-		</section>
-
 	</div>
 
-	</div>
-	
 	<!-- Content who we are
 
 		<div class="about">
@@ -308,23 +340,24 @@ Connect to Grow helps you find the best solution to every services and professio
 	 End of who we are -->
 
 	<!-- For Mobile-->
-	<div class="services view" id="allservices">
+	<div class="services view mobile-section" id="allservices">
 		<h1>Our services</h1>
 
 		<div class="row">
 			<div class="col-sm-4">
-				<div class="cont">
+				<div class="cont cm1">
 					<div class="header">
 						Development <i class="fas fa-laptop"></i>
 					</div>
 					<div class="body">
-						Does your product need a technical developer that develops it according to your need?? We help you find the best service provider to cater your need.
+						Does your product need a technical developer that develops it according to your need?? We help
+						you find the best service provider to cater your need.
 						<br>
 						<br>
 
 						<div class="dev-img"></div>
 						<div class="sub-body">
-							<div class="sub-cont">	
+							<div class="sub-cont">
 								<div class="container2 right1">
 									<h4>Web Development</h4>
 								</div>
@@ -348,18 +381,20 @@ Connect to Grow helps you find the best solution to every services and professio
 
 
 			<div class="col-sm-4">
-				<div class="cont">
+				<div class="cont cm2">
 					<div class="header" style="background-color: #D5A021">
 						Legal Services <i class="fas fa-laptop"></i>
 					</div>
 					<div class="body">
-						Legal services is a troublesome arena for a startup today where every step from registration to a product launch requires legal documentation. We provide you with hassle free legal assistance you require for your startup.
+						Legal services is a troublesome arena for a startup today where every step from registration to
+						a product launch requires legal documentation. We provide you with hassle free legal assistance
+						you require for your startup.
 						<br>
 						<br>
 
 						<div class="legal-img"></div>
 						<div class="sub-body">
-							<div class="sub-cont">	
+							<div class="sub-cont">
 								<div class="container2 right1">
 									<h4>Comapany Registration</h4>
 								</div>
@@ -386,18 +421,19 @@ Connect to Grow helps you find the best solution to every services and professio
 
 
 			<div class="col-sm-4">
-				<div class="cont">
+				<div class="cont cm3">
 					<div class="header">
 						SEO & Digital Marketting <i class="fas fa-laptop"></i>
 					</div>
 					<div class="body">
-						Is the new age digital marketing strategy not your arena and your startup needs a marketing expert? We help you pick the best for you. Select the service provider from our website.
+						Is the new age digital marketing strategy not your arena and your startup needs a marketing
+						expert? We help you pick the best for you. Select the service provider from our website.
 						<br>
 						<br>
 
 						<div class="seo-img"></div>
 						<div class="sub-body">
-							<div class="sub-cont">	
+							<div class="sub-cont">
 								<div class="container2 right1">
 									<h4>Long Term SEO</h4>
 								</div>
@@ -421,18 +457,19 @@ Connect to Grow helps you find the best solution to every services and professio
 
 
 			<div class="col-sm-4">
-				<div class="cont">
+				<div class="cont cm4">
 					<div class="header" style="background-color: #D5A021">
 						Mentorship <i class="fas fa-laptop"></i>
 					</div>
 					<div class="body">
-						Mentoring is an indispensable requirement in a startup's growth. Get mentorship from the famous faces of the startup industry at Connect to Grow.
+						Mentoring is an indispensable requirement in a startup's growth. Get mentorship from the famous
+						faces of the startup industry at Connect to Grow.
 						<br>
 						<br>
 
 						<div class="mentor-img"></div>
 						<div class="sub-body">
-							<div class="sub-cont">	
+							<div class="sub-cont">
 								<div class="container2 right1">
 									<h4>Guided Entrepreneurship</h4>
 								</div>
@@ -458,17 +495,18 @@ Connect to Grow helps you find the best solution to every services and professio
 			</div>
 
 			<div class="col-sm-4">
-				<div class="cont">
+				<div class="cont cm5">
 					<div class="header">
 						Event Management <i class="fas fa-laptop"></i>
 					</div>
 					<div class="body">
-						Organise your events and and be up-to-date with reminders and event management service of Connect to Grow.
+						Organise your events and and be up-to-date with reminders and event management service of
+						Connect to Grow.
 						<br>
 						<br>
 						<div class="event-img"></div>
 						<div class="sub-body">
-							<div class="sub-cont">	
+							<div class="sub-cont">
 								<div class="container2 right1">
 									<h4>Corporate Events</h4>
 								</div>
@@ -492,18 +530,19 @@ Connect to Grow helps you find the best solution to every services and professio
 
 
 			<div class="col-sm-4">
-				<div class="cont">
+				<div class="cont cm6">
 					<div class="header" style="background-color: #D5A021">
 						Branding & Designing <i class="fas fa-laptop"></i>
 					</div>
 					<div class="body">
-						Facing troubles in designing and branding of your product? Connect to Grow connects you to your required domain of through the our precise search results and verified service providers.
+						Facing troubles in designing and branding of your product? Connect to Grow connects you to your
+						required domain of through the our precise search results and verified service providers.
 						<br>
 						<br>
 
 						<div class="brand-img"></div>
 						<div class="sub-body">
-							<div class="sub-cont">	
+							<div class="sub-cont">
 								<div class="container2 right1">
 									<h4>T-shirts</h4>
 								</div>
@@ -538,29 +577,30 @@ Connect to Grow helps you find the best solution to every services and professio
 	</div>
 	<!-- End of Mobile -->
 
-	<!-- For DeskTopView --> 
+	<!-- For DeskTopView -->
 
-		<div class="service-head mob-hide" id="allservice">
-			<center>
-				<h1 class="main-headers">Our services</h1>
-			</center>
-		</div>
-		<div class="timeline mob-hide">
-		  <div class="container1 left">
-		    <div class="content">
-		  		<div class="cont">
+	<div class="service-head mob-hide" id="allservice">
+		<center>
+			<h1 class="main-headers">Our services</h1>
+		</center>
+	</div>
+	<div class="timeline mob-hide">
+		<div class="container1 left c1l">
+			<div class="content">
+				<div class="cont">
 					<div class="header">
 						Development <i class="fas fa-laptop"></i>
 					</div>
 					<div class="body">
-						Does your product need a technical developer that develops it according to your need?? We help you find the best service provider to cater your need.
+						Does your product need a technical developer that develops it according to your need?? We help
+						you find the best service provider to cater your need.
 						<br>
 						<br>
 
 						<div class="dev-img"></div>
 
 						<div class="sub-body">
-							<div class="sub-cont">	
+							<div class="sub-cont">
 								<div class="container2 right1">
 									<h4>Web Development</h4>
 								</div>
@@ -580,22 +620,24 @@ Connect to Grow helps you find the best solution to every services and professio
 						<button onclick="location.href='Assests/Pages/development.html'">Get Quote!</button>
 					</div>
 				</div>
-		    </div>
-		  </div>
-		  <div class="container1 right" style="position: absolute;top: 5%;">
-		    <div class="content">
-		     <div class="cont">
+			</div>
+		</div>
+		<div class="container1 right c1r" style="position: absolute;top: 5%;">
+			<div class="content">
+				<div class="cont">
 					<div class="header" style="background-color: #D5A021">
 						Legal Services <i class="fas fa-laptop"></i>
 					</div>
 					<div class="body">
-						Legal services is a troublesome arena for a startup today where every step from registration to a product launch requires legal documentation. We provide you with hassle free legal assistance you require for your startup.
+						Legal services is a troublesome arena for a startup today where every step from registration to
+						a product launch requires legal documentation. We provide you with hassle free legal assistance
+						you require for your startup.
 						<br>
 						<br>
 
 						<div class="legal-img"></div>
 						<div class="sub-body">
-							<div class="sub-cont">	
+							<div class="sub-cont">
 								<div class="container2 right1">
 									<h4>Comapany Registration</h4>
 								</div>
@@ -618,22 +660,23 @@ Connect to Grow helps you find the best solution to every services and professio
 						<button onclick="location.href='Assests/Pages/legal.html'">Get Quote!</button>
 					</div>
 				</div>
-		    </div>
-		  </div>
-		  <div class="container1 left">
-		    <div class="content">
-		      <div class="cont">
+			</div>
+		</div>
+		<div class="container1 left c2l">
+			<div class="content">
+				<div class="cont">
 					<div class="header">
 						SEO and Digital Marketing <i class="fas fa-laptop"></i>
 					</div>
 					<div class="body">
-						Is the new age digital marketing strategy not your arena and your startup needs a marketing expert? We help you pick the best for you. Select the service provider from our website.
+						Is the new age digital marketing strategy not your arena and your startup needs a marketing
+						expert? We help you pick the best for you. Select the service provider from our website.
 						<br>
 						<br>
 
 						<div class="seo-img"></div>
 						<div class="sub-body">
-							<div class="sub-cont">	
+							<div class="sub-cont">
 								<div class="container2 right1">
 									<h4>Long Term SEO</h4>
 								</div>
@@ -652,22 +695,23 @@ Connect to Grow helps you find the best solution to every services and professio
 
 						<button onclick="location.href='Assests/Pages/digital.html'">Get Quote!</button>
 					</div>
-			  </div>
-		    </div>
-		  </div>
-		  <div class="container1 right" style="position: absolute;top: 42%">
-		    <div class="content">
-		     <div class="cont">
+				</div>
+			</div>
+		</div>
+		<div class="container1 right c2r" style="position: absolute;top: 42%">
+			<div class="content">
+				<div class="cont">
 					<div class="header" style="background-color: #D5A021">
 						Mentorship <i class="fas fa-laptop"></i>
 					</div>
 					<div class="body">
-						Mentoring is an indispensable requirement in a startup's growth. Get mentorship from the famous faces of the startup industry at Connect to Grow.
+						Mentoring is an indispensable requirement in a startup's growth. Get mentorship from the famous
+						faces of the startup industry at Connect to Grow.
 						<br>
 						<br>
 						<div class="mentor-img"></div>
 						<div class="sub-body">
-							<div class="sub-cont">	
+							<div class="sub-cont">
 								<div class="container2 right1">
 									<h4>Guided Entrepreneurship</h4>
 								</div>
@@ -689,23 +733,24 @@ Connect to Grow helps you find the best solution to every services and professio
 
 						<button onclick="location.href='Assests/Pages/mentor.html'">Get Quote!</button>
 					</div>
-			 </div>
-		    </div>
-		  </div>
-		  <div class="container1 left">
-		    <div class="content">
-		      <div class="cont">
+				</div>
+			</div>
+		</div>
+		<div class="container1 left c3l">
+			<div class="content">
+				<div class="cont">
 					<div class="header">
 						Event Management <i class="fas fa-laptop"></i>
 					</div>
 					<div class="body">
-						Organise your events and and be up-to-date with reminders and event management service of Connect to Grow.
+						Organise your events and and be up-to-date with reminders and event management service of
+						Connect to Grow.
 						<br>
 						<br>
 
 						<div class="event-img"></div>
 						<div class="sub-body">
-							<div class="sub-cont">	
+							<div class="sub-cont">
 								<div class="container2 right1">
 									<h4>Corporate Events</h4>
 								</div>
@@ -724,23 +769,24 @@ Connect to Grow helps you find the best solution to every services and professio
 
 						<button onclick="location.href='Assests/Pages/event.html'">Get Quote!</button>
 					</div>
-			  </div>
-		    </div>
-		  </div>
-		  <div class="container1 right" style="position: absolute;top: 78%;">
-		    <div class="content">
-		      <div class="cont">
+				</div>
+			</div>
+		</div>
+		<div class="container1 right c3r" style="position: absolute;top: 78%;">
+			<div class="content">
+				<div class="cont">
 					<div class="header" style="background-color: #D5A021">
 						Branding & Designing <i class="fas fa-laptop"></i>
 					</div>
 					<div class="body">
-						Facing troubles in designing and branding of your product? Connect to Grow connects you to your required domain of through the our precise search results and verified service providers.
+						Facing troubles in designing and branding of your product? Connect to Grow connects you to your
+						required domain of through the our precise search results and verified service providers.
 						<br>
 						<br>
 
 						<div class="brand-img"></div>
 						<div class="sub-body">
-							<div class="sub-cont">	
+							<div class="sub-cont">
 								<div class="container2 right1">
 									<h4>T-shirts</h4>
 								</div>
@@ -768,22 +814,22 @@ Connect to Grow helps you find the best solution to every services and professio
 
 						<button onclick="location.href='Assests/Pages/brand.html'">Get Quote!</button>
 					</div>
-			  </div>
-		    </div>
-		  </div>
+				</div>
+			</div>
 		</div>
+	</div>
 
 	<!-- End of Desktop view -->
 
 	<div class="footer bg-color">
 
-		<div class="row" style="margin-right:0px;margin-left:0px;"> 
+		<div class="row" style="margin-right:0px;margin-left:0px;">
 			<div class="col-sm-4" style="padding: 50px;">
 				<center>
 					<h1 style="color: #fff;letter-spacing: 2px;font-weight: bold;">Connect To Grow</h1>
 					<img class="ctg-logo" src="logo.png">
 					<h4 style="color: rgba(255, 255, 255, 0.5);">We connect you grow</h4>
-						<!--<h4 class="text-color">CONTACT US</h4>
+					<!--<h4 class="text-color">CONTACT US</h4>
 						<hr style="background-color: grey; margin-top: 0px;" class="width-50">
 						<p class="para1 align" style="font-size:18px"> 
 						<i class="fa fa-envelope text-color"></i>&nbsp;<strong>Email: </strong>connectogrow@gmail.com<br><br><br><br></p>
@@ -793,108 +839,152 @@ Connect to Grow helps you find the best solution to every services and professio
 	              <p class="para1 align">NIET, Plot No 19, Knowledge Park II, Greater Noida, Uttar Pradesh<br>
 				  <i class="fa fa-phone text-color"></i>&nbsp;<strong>Phone: </strong>+91-8318100759<br>
 				  <i class="fa fa-envelope text-color"></i>&nbsp;<strong>Email: </strong>teamcodenova@gmail.com</p> -->
-            	</center>
+				</center>
 			</div>
 
 			<div class="col-sm-3" style="padding: 50px;">
-				
-			
-					
-					<h4 class="text-color" style="text-align: center;letter-spacing: 2px;">SITE LINKS</h4>
-	             	<hr style="background-color: grey;margin-top: 0px;" class="width-50">
-					<div class="column-site-links">
-						
-						<ul class="menu-ul">
 
-							<!--<li class="list-item">
+
+
+				<h4 class="text-color" style="text-align: center;letter-spacing: 2px;">SITE LINKS</h4>
+				<hr style="background-color: grey;margin-top: 0px;" class="width-50">
+				<div class="column-site-links">
+
+					<ul class="menu-ul">
+
+						<!--<li class="list-item">
 								<i class="fa fa-angle-right ficon"></i><a href="#">ABOUT US</a>
 							</li>-->
-							<li class="list-item">
-								<i class="fa fa-angle-right ficon"></i><a href="https://swapnil-tiwari.github.io/ctg-portfolio/">PORTFOLIO</a>
-							</li>
-							<li class="list-item">
-								<i class="fa fa-angle-right ficon"></i><a href="#">PRIVACY POLICY</a>
-							</li>
-							<li class="list-item">
-								<i class="fa fa-angle-right ficon"></i><a href="#">TERMS OF USE</a>
-							</li>
-							<li class="list-item">
-								<i class="fa fa-angle-right ficon"></i><a href="https://connectogrow.blogspot.com/">BLOG</a>
-							</li>
-							
-						</ul>
-					</div>
+						<li class="list-item">
+							<i class="fa fa-angle-right ficon"></i><a
+								href="https://swapnil-tiwari.github.io/ctg-portfolio/">PORTFOLIO</a>
+						</li>
+						<li class="list-item">
+							<i class="fa fa-angle-right ficon"></i><a href="#">PRIVACY POLICY</a>
+						</li>
+						<li class="list-item">
+							<i class="fa fa-angle-right ficon"></i><a href="#">TERMS OF USE</a>
+						</li>
+						<li class="list-item">
+							<i class="fa fa-angle-right ficon"></i><a href="https://connectogrow.blogspot.com/">BLOG</a>
+						</li>
+
+					</ul>
+				</div>
 
 			</div>
 			<div class="col-sm-2" style="padding: 50px;">
-				
-					
-					<h4 class="text-color" style="text-align: center;letter-spacing: 2px;">GET HELP</h4>
-	             	<hr style="background-color: grey;margin-top: 0px;" class="width-50">
-	             	<div class="column-site-links">
-						
-						<ul class="menu-ul">
 
-							<li class="list-item">
-								<i class="fa fa-angle-right ficon"></i><a href="./contactus.html">CONTACT US</a>
-							</li>
-							
-						</ul>
-					</div>
+
+				<h4 class="text-color" style="text-align: center;letter-spacing: 2px;">GET HELP</h4>
+				<hr style="background-color: grey;margin-top: 0px;" class="width-50">
+				<div class="column-site-links">
+
+					<ul class="menu-ul">
+
+						<li class="list-item">
+							<i class="fa fa-angle-right ficon"></i><a href="./contactus.html">CONTACT US</a>
+						</li>
+
+					</ul>
+				</div>
 
 			</div>
 
 			<div class="col-sm-3" style="padding: 50px;">
-					
+
 				<center>
-				
-	              <h4 class="text-color" style="text-align: center;letter-spacing: 2px;">SOCIAL LINKS</h4>
-	              <hr style="background-color: grey;margin-top: 0px;" class="width-50">
-	              <a href="https://business.facebook.com/Connect-To-Grow-474418903021671/?business_id=286040325509745" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook-square fa-3x fa-color"></i>&nbsp;</a>
-	              <a href="https://www.instagram.com/connectogrow/" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram fa-3x i-color"></i>&nbsp;</a>
-	              <a href="https://twitter.com/TeamCodeNova/" rel="noopener noreferrer" target="_blank"><i class="fab fa-twitter-square fa-3x twi-color"></i></a>
-            	
-            	</center>
+
+					<h4 class="text-color" style="text-align: center;letter-spacing: 2px;">SOCIAL LINKS</h4>
+					<hr style="background-color: grey;margin-top: 0px;" class="width-50">
+					<a href="https://business.facebook.com/Connect-To-Grow-474418903021671/?business_id=286040325509745"
+						rel="noopener noreferrer" target="_blank"><i
+							class="fab fa-facebook-square fa-3x fa-color"></i>&nbsp;</a>
+					<a href="https://www.instagram.com/connectogrow/" rel="noopener noreferrer" target="_blank"><i
+							class="fab fa-instagram fa-3x i-color"></i>&nbsp;</a>
+					<a href="https://twitter.com/TeamCodeNova/" rel="noopener noreferrer" target="_blank"><i
+							class="fab fa-twitter-square fa-3x twi-color"></i></a>
+
+				</center>
 			</div>
 		</div>
-		
+
 	</div>
 	<!-- end of footer -->
-      <div class="copyright">
-        <div style="padding: 30px 50px">
-           <font color="#fff">© Copyright <strong class="text-color">CodeNova</strong></font><br>
-           <font color="#fff">All Rights Reserved</font>
-        </div>
-      </div>
+	<div class="copyright">
+		<div style="padding: 30px 50px">
+			<font color="#fff">© Copyright <strong class="text-color">CodeNova</strong></font><br>
+			<font color="#fff">All Rights Reserved</font>
+		</div>
+	</div>
 </body>
 
 </html>
 
-
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 <script>
-        $(document).ready(function(){
-          // Add smooth scrolling to all links
-          $("#liserv, #scroll").on('click', function(event) {
-            console.log("hello")
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-              // Prevent default anchor click behavior
-              event.preventDefault();
-        
-              // Store hash
-              var hash = this.hash;
-              // Using jQuery's animate() method to add smooth page scroll
-              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-              $('html, body').animate({
-                scrollTop: $(hash).offset().top
-              }, 800, function(){
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-               // 
-              });
+	$(document).ready(function () {
+		// Add smooth scrolling to all links
+		$("#liserv, #scroll").on('click', function (event) {
+			console.log("hello")
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
 
-            } // End if
-          })
-      })
+				// Store hash
+				var hash = this.hash;
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function () {
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+					// 
+				});
 
-   </script>
+			} // End if
+		})
+	})
+	$(function () {
+		$('body').scroll(function () {
+			if (this.scrollTop > 50) {
+				$('.c1l').addClass('animated fadeInUp')
+			}
+			if (this.scrollTop > 400) {
+				$('.c1r').addClass('animated fadeInUp')
+			}
+			if (this.scrollTop > 750) {
+				$('.c2l').addClass('animated fadeInUp')
+			}
+			if (this.scrollTop > 1000) {
+				$('.c2r').addClass('animated fadeInUp')
+			}
+			if (this.scrollTop > 1350) {
+				$('.c3l').addClass('animated fadeInUp')
+			}
+			if (this.scrollTop > 1700) {
+				$('.c3r').addClass('animated fadeInUp')
+			}
+			if (this.scrollTop > 100) {
+				$('.cm1').addClass('animated fadeInUp')
+			}
+			if (this.scrollTop > 679) {
+				$('.cm2').addClass('animated fadeInUp')
+			}
+			if (this.scrollTop > 1320) {
+				$('.cm3').addClass('animated fadeInUp')
+			}
+			if (this.scrollTop > 1920) {
+				$('.cm4').addClass('animated fadeInUp')
+			}
+			if (this.scrollTop > 2540) {
+				$('.cm5').addClass('animated fadeInUp')
+			}
+			if (this.scrollTop > 3150) {
+				$('.cm6').addClass('animated fadeInUp')
+			}
+		});
+	});
+</script>
